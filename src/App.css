@@ -1,0 +1,42 @@
+.app-root {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+/* ── Header ── */
+.app-header {
+  text-align: center;
+  padding: 3.5rem 1.5rem 2.5rem;
+  background: linear-gradient(180deg, var(--color-page-headerGradientTop) 0%, var(--color-page-background) 100%);
+}
+
+.app-eyebrow {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.25em !important;
+  text-transform: uppercase !important;
+  color: var(--color-accent-gold) !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.app-title {
+  font-family: 'Cinzel', serif !important;
+  font-size: clamp(2rem, 5vw, 3.5rem) !important;
+  font-weight: 900 !important;
+  color: var(--color-text-primary) !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.1 !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.app-subtitle {
+  font-family: 'Source Serif 4', serif !important;
+  font-size: 1rem !important;
+  font-style: italic !important;
+  color: var(--color-text-muted) !important;
+}
+
+/* First event/info section gets a gold top border to separate it from the header */
+main > section:first-child {
+  border-top: 1px solid #917b26;
+}

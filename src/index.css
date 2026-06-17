@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import './colors.css';
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--color-page-background);
+  color: var(--color-text-primary);
+  font-family: 'Source Serif 4', Georgia, serif;
+  min-height: 100vh;
+}

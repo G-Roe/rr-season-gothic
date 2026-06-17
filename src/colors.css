@@ -1,0 +1,40 @@
+/* ============================================================
+   COLOR PALETTE — edit values here to restyle the whole app.
+   Naming pattern: --color-{area}-{element}-{state}
+   ============================================================ */
+
+:root {
+
+  /* ---- Page ---- */
+  --color-page-background: #131110;
+  --color-page-headerGradientTop: #0d0b09;
+  --color-page-headerBorder: #2a2520;
+
+  /* ---- Text (general) ---- */
+  --color-text-primary: #f5f0e8;        /* main parchment-white text */
+  --color-text-secondary: #c4b89a;      /* card description body */
+  --color-text-muted: #6b7280;          /* subtitles, mist-grey labels */
+  --color-text-meta: #a09070;           /* footer metadata (time, players) */
+  --color-text-onAccent: #1a1714;       /* text sitting on a bright/gold background */
+
+  /* ---- Accent (gold) ---- */
+  --color-accent-gold: #b8963e;
+  --color-accent-goldHover: #d4af37;
+
+  /* ---- Priority selector ---- */
+  --color-priority-selectedBackground: #8b1a1a;   /* "blood" red */
+  --color-priority-selectedBorder: #c94f2a;       /* "ember" orange */
+  --color-priority-selectedGlow: rgba(139, 26, 26, 0.5);
+  --color-priority-takenText: #6b7280;
+
+  /* ---- Card / section image ---- */
+  --color-card-background: #211e1b;
+  --color-card-border: #3d3530;
+  --color-card-imageOverlay: rgba(33, 30, 27, 0.85);
+
+  /* ---- Status feedback (form submission) ---- */
+  --color-status-successText: #7fae6e;
+  --color-status-successBorder: #4a6b3a;
+  --color-status-errorText: #d4756a;
+
+}

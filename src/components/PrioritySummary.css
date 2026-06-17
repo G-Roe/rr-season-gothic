@@ -1,0 +1,148 @@
+.summary-section {
+  max-width: 700px;
+  margin: 2.5rem auto 0;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid #917b26;
+}
+
+.summary-heading {
+  font-family: 'Cinzel', serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  color: var(--color-accent-gold) !important;
+  text-transform: uppercase !important;
+  margin-bottom: 1rem !important;
+}
+
+.summary-empty {
+  font-family: 'Source Serif 4', serif !important;
+  font-style: italic !important;
+  font-size: 0.9rem !important;
+  color: var(--color-text-muted) !important;
+}
+
+.summary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-row {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  background: var(--color-card-background);
+  border: 1px solid var(--color-card-border);
+  border-radius: 6px;
+}
+
+.summary-rank {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: var(--color-priority-selectedBackground);
+}
+
+.summary-event-title {
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+}
+
+.summary-event-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* ── Submit form, nested inside the summary ── */
+.summary-submit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 400px;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-page-headerBorder);
+}
+
+.summary-field-label {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.65rem !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: var(--color-text-muted) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.summary-field-input {
+  background: var(--color-card-background) !important;
+  border: 1.5px solid var(--color-card-border) !important;
+  color: var(--color-text-primary) !important;
+  font-family: 'Source Serif 4', serif !important;
+  font-size: 0.95rem !important;
+  height: 42px !important;
+}
+
+.summary-field-input:focus {
+  border-color: var(--color-accent-gold) !important;
+}
+
+.summary-field-input::placeholder {
+  color: var(--color-text-muted) !important;
+  opacity: 0.6;
+}
+
+.summary-submit-button {
+  background: var(--color-accent-gold) !important;
+  color: #1a1714 !important;
+  font-family: 'Cinzel', serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  border: none !important;
+  height: 44px !important;
+  align-self: flex-start;
+  transition: background 0.15s ease !important;
+}
+
+.summary-submit-button:hover:not(:disabled) {
+  background: var(--color-accent-goldHover) !important;
+}
+
+.summary-submit-button:disabled {
+  background: var(--color-card-border) !important;
+  color: var(--color-text-muted) !important;
+  opacity: 1 !important;
+  cursor: not-allowed !important;
+}
+
+.summary-submit-hint {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.72rem !important;
+  color: var(--color-text-muted) !important;
+}
+
+.summary-submit-error {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.78rem !important;
+  color: var(--color-status-errorText) !important;
+}
+
+/* ── Success state, replaces the form entirely ── */
+.summary-success {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-page-headerBorder);
+  max-width: 400px;
+}
+
+.summary-success-text {
+  font-family: 'Cinzel', serif !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: var(--color-status-successText) !important;
+  letter-spacing: 0.02em !important;
+}
