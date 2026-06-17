@@ -1,6 +1,7 @@
 import event1 from './event-1-the-hunted.md?raw'
 import event2 from './event-2-dee-sanction.md?raw'
 import event3 from './event-3-the-terror-beneath.md?raw'
+import event4 from './event-4-kult.md?raw'
 import info1 from './info-1-welcome.md?raw'
 
 // Simple browser-safe frontmatter parser — no Node dependencies
@@ -20,7 +21,7 @@ function parseMd(raw) {
   return { attributes, body }
 }
 
-const raws = [event1, event2, event3, info1]
+const raws = [info1, event1, event2, event3, event4]
 
 export const events = raws.map((raw, i) => {
   const { attributes, body } = parseMd(raw)

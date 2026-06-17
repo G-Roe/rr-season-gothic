@@ -1,17 +1,18 @@
 ---
 type: info
-title: Welcome to the Table
-image: /images/placeholder.svg
+title: Folk Horror Season
+image: /images/sun-logo.jpg
 ---
 
-Before you choose, a quick word from the **organisers**: each session runs as a self-contained one-shot, so no prior experience with the system is needed.
+The Folk Horror Season runs from **Monday 28 April to Sunday 4 May**. There are seven games on offer. We try to get as many people into as many games as possible. You are welcome to sign up for as many games as you like, but availability may be restricted. All we ask is that you are free to join all the games you register for. 
 
-A few things to know:
+> If you are not currently a member of the Raspy Raven Discord server, you may join [here](https://discord.gg/7VdFAKuezs).
 
-- Bring a notebook if you like to track your character's story
-- Sessions start *promptly* — please arrive 10 minutes early
-- Your top priority isn't a guarantee, just a strong preference we'll do our best to honour
+# How We Run Games 
 
-> "The dice don't care about your plans." — GM wisdom, origin unknown
+If you haven't played with us before, here are some things you should know.
 
-Questions? Find a [member of staff](https://example.com) at the front desk.
+ - Games times are expressed in BST (UTC+1). 
+ - Games require no previous knowledge of the rules. 
+ - All games use discord for audio and optional video. 
+ - All games operate an open table and use safety tools.

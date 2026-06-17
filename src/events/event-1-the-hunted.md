@@ -1,7 +1,7 @@
 ---
 title: The Hunted
 gamecode: hunt
-image: /images/the-hunted.jpg
+image: /images/the-hunted.png
 system: The Hunted
 system_url: https://www.drivethrurpg.com/product/the-hunted
 gm: IdesOfMarch (Alex)

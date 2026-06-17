@@ -50,7 +50,7 @@ export default function PrioritySummary({ events, priorities, onSubmit, submitSt
         <form onSubmit={handleSubmit} className="summary-submit-form">
           <TextInput
             label="Discord Username"
-            placeholder="e.g. alex#1234 or alex.gm"
+            placeholder="e.g. jwmuk"
             required
             value={discordUsername}
             onChange={(e) => setDiscordUsername(e.currentTarget.value)}
@@ -70,8 +70,7 @@ export default function PrioritySummary({ events, priorities, onSubmit, submitSt
           </Button>
 
           {!hasAnySelection && (
-            <Text className="summary-submit-hint">
-              Select a priority on at least one event above before submitting.
+            <Text className="summary-submit-hint">              
             </Text>
           )}
 

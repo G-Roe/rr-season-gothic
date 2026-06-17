@@ -76,10 +76,10 @@ export default function App() {
   return (
     <div className="app-root">
       <header className="app-header">
-        <Text className="app-eyebrow">One-Shot Events</Text>
-        <Title className="app-title">Pick Your Game</Title>
+        <Text className="app-eyebrow">-- Raspy Raven :: Player Sign-Up --</Text>
+        <Title className="app-title">Folk Horror Season</Title>
         <Text className="app-subtitle">
-          Rank the events you'd like to play — 1 is your top pick.
+          Rank the games you'd like to play — 1 is your top pick.
         </Text>
       </header>
 

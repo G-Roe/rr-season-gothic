@@ -1,7 +1,7 @@
 ---
-title: The Fate of Two Kingdoms: Dee Sanction 
+title: The Fate of Two Kingdoms
 gamecode: dee
-image: /images/the-hunted.jpg
+image: /images/dee-sanction.png
 system: Dee Sanction
 system_url: https://www.drivethrurpg.com/
 gm: Alistair Smith
