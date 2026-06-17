@@ -13,7 +13,7 @@ rating: 18
 
 You and your hiking group have been training hard, and you’re ready for your first challenge walk. The Moorland Mastery, organised by popular outdoor adventure and motivational speaker Lucien Burke, seems ideal. Fifty miles across the Peak District National Park, and twenty-four hours to complete it. No problem. Compared to the military training exercises some of you have taken part in, this is going to be a walk in the park.
 
-Content:  Isolation, body horror, gore, drugs, helplessness, trauma.
+> Content:  Isolation, body horror, gore, drugs, helplessness, trauma.
 Tech: Discord + Roll 20
 
 

@@ -1,6 +1,10 @@
 import { Text, Group, Anchor, Tooltip } from '@mantine/core'
+import ReactMarkdown from 'react-markdown'
 import { IconUsers, IconClock, IconShieldHalf, IconExternalLink } from '@tabler/icons-react'
 import './EventSection.css'
+import './InfoSection.css'
+
+
 
 export default function EventSection({ event, totalEvents, selectedPriority, takenNumbers, onPriorityChange }) {
   const numbers = Array.from({ length: totalEvents }, (_, i) => i + 1)
@@ -16,7 +20,9 @@ export default function EventSection({ event, totalEvents, selectedPriority, tak
 
       <div className="event-content">
         <Text className="event-title">{event.title}</Text>
-        <Text className="event-description">{event.description}</Text>
+        <div className="event-description info-markdown">
+          <ReactMarkdown>{event.description}</ReactMarkdown>
+        </div>
 
         <div className="event-meta-row">
           <span className="meta-item">

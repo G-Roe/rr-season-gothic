@@ -79,7 +79,7 @@ export default function App() {
         <Text className="app-eyebrow">-- Raspy Raven :: Player Sign-Up --</Text>
         <Title className="app-title">Folk Horror Season</Title>
         <Text className="app-subtitle">
-          Rank the games you'd like to play — 1 is your top pick.
+          Select the games you would like you play, indicating your priority.
         </Text>
       </header>
 

@@ -50,7 +50,7 @@ export default function PrioritySummary({ events, priorities, onSubmit, submitSt
         <form onSubmit={handleSubmit} className="summary-submit-form">
           <TextInput
             label="Discord Username"
-            placeholder="e.g. jwmuk"
+            placeholder="(your name here)"
             required
             value={discordUsername}
             onChange={(e) => setDiscordUsername(e.currentTarget.value)}

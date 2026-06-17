@@ -2,7 +2,7 @@
   max-width: 760px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
-  border-bottom: 1px solid var(--color-page-headerBorder);
+  border-top: 1px solid var(--color-page-headerBorder);
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 2rem;
@@ -23,7 +23,7 @@
   background-size: cover;
   background-position: center;
   background-color: var(--color-card-background);
-  border: 1px solid var(--color-card-border);
+  border: 3px solid var(--color-card-border);
 }
 
 @media (max-width: 700px) {
