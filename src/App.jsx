@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Title, Text } from '@mantine/core'
 import { events, selectableEvents } from './events/index.js'
 import { SUBMIT_ENDPOINT_URL } from './config.js'
-import EventSection from './components/EventSection'
+import EventSection, { makeSparkles } from './components/EventSection'
 import InfoSection from './components/InfoSection'
 import PrioritySummary from './components/PrioritySummary'
 import './App.css'
@@ -11,7 +11,17 @@ export default function App() {
   const [priorities, setPriorities] = useState({})
   // submitStatus: 'idle' | 'submitting' | 'success' | 'error'
   const [submitStatus, setSubmitStatus] = useState('idle')
+  const [titleSparkles, setTitleSparkles] = useState(null)
   const totalSelectable = selectableEvents.length
+
+  // Fairy sparkles flutter round the page title once when it loads
+  useEffect(() => {
+    setTitleSparkles(makeSparkles(16))
+    const timer = setTimeout(() => setTitleSparkles(null), 7000)
+    return () => clearTimeout(timer)
+  }, [])
+  // The page title comes from the front matter title of the first info card (info-1-welcome.md)
+  const seasonTitle = events.find(e => e.type === 'info')?.title ?? ''
 
   const takenByOthers = (excludeEventId) =>
     Object.entries(priorities)
@@ -77,7 +87,12 @@ export default function App() {
     <div className="app-root">
       <header className="app-header">
         <Text className="app-eyebrow">-- Raspy Raven :: Player Sign-Up --</Text>
-        <Title className="app-title">Folk Horror Season</Title>
+        <div className="event-title-wrap">
+          {titleSparkles?.map((s, i) => (
+            <span key={i} className="title-sparkle" style={s} aria-hidden="true" />
+          ))}
+          <Title className="app-title">{seasonTitle}</Title>
+        </div>
         <Text className="app-subtitle">
           Select the games you would like you play, indicating your priority.
         </Text>

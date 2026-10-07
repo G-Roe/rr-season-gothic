@@ -7,7 +7,7 @@ export default function InfoSection({ event }) {
   return (
     <section className="info-section">
       <div
-        className="event-image"
+        className="event-image event-image--smoke"
         style={{ backgroundImage: `url(${event.image})` }}
         role="img"
         aria-label={event.title}

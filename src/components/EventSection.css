@@ -32,6 +32,61 @@
   }
 }
 
+/* ---- Smoke effect (opt-in: add .event-image--smoke) ----
+   Two oversized layers of soft wisps drift slowly in opposite directions.
+   Pure CSS (gradients + transforms), so it stays cheap on the GPU. */
+.event-image--smoke {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.event-image--smoke::before,
+.event-image--smoke::after {
+  content: '';
+  position: absolute;
+  inset: -25%;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.event-image--smoke::before {
+  background:
+    radial-gradient(ellipse 38% 22% at 22% 78%, rgba(226, 218, 200, 0.5), transparent 70%),
+    radial-gradient(ellipse 30% 26% at 68% 88%, rgba(226, 218, 200, 0.42), transparent 70%),
+    radial-gradient(ellipse 26% 34% at 48% 58%, rgba(226, 218, 200, 0.3), transparent 72%);
+  opacity: 0.4;
+  animation: smoke-drift-a 19s ease-in-out infinite alternate;
+}
+
+.event-image--smoke::after {
+  background:
+    radial-gradient(ellipse 34% 24% at 78% 70%, rgba(226, 218, 200, 0.45), transparent 70%),
+    radial-gradient(ellipse 28% 30% at 30% 92%, rgba(226, 218, 200, 0.38), transparent 70%),
+    radial-gradient(ellipse 22% 28% at 60% 45%, rgba(226, 218, 200, 0.26), transparent 72%);
+  opacity: 0.32;
+  animation: smoke-drift-b 27s ease-in-out infinite alternate;
+}
+
+@keyframes smoke-drift-a {
+  0%   { transform: translate3d(-6%, 6%, 0) rotate(-2deg) scale(1);    opacity: 0.25; }
+  50%  { opacity: 0.45; }
+  100% { transform: translate3d(6%, -10%, 0) rotate(3deg) scale(1.15); opacity: 0.3; }
+}
+
+@keyframes smoke-drift-b {
+  0%   { transform: translate3d(7%, 8%, 0) rotate(2deg) scale(1.1);     opacity: 0.3; }
+  50%  { opacity: 0.42; }
+  100% { transform: translate3d(-7%, -12%, 0) rotate(-3deg) scale(1);   opacity: 0.2; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .event-image--smoke::before,
+  .event-image--smoke::after {
+    animation: none;
+  }
+}
+
 .event-title {
   font-family: 'Cinzel', serif !important;
   font-size: 1.5rem !important;
@@ -53,7 +108,6 @@
   line-height: 1.75 !important;
   color: var(--color-text-secondary) !important;
   margin-bottom: 1.5rem !important;
-  white-space: pre-line;
 }
 
 .event-meta-row {
@@ -160,4 +214,43 @@
   opacity: 0.25;
   cursor: not-allowed !important;
   color: var(--color-priority-takenText) !important;
+}
+
+/* ── Fairy sparkles around the title (first time it scrolls into the top half) ── */
+.event-title-wrap {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.event-title-wrap .event-title,
+.event-title-wrap .app-title {
+  position: relative;
+  z-index: 1;
+}
+
+.title-sparkle {
+  position: absolute;
+  z-index: 0;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff6d6 0%, var(--color-accent-gold) 45%, transparent 75%);
+  box-shadow: 0 0 6px 2px rgba(255, 230, 150, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  animation: sparkle-flutter var(--dur) ease-in-out var(--delay) both;
+}
+
+@keyframes sparkle-flutter {
+  0%   { opacity: 0;    transform: translate(0, 0) scale(0.4); }
+  15%  { opacity: 0.9; }
+  30%  { transform: translate(var(--x1), var(--y1)) scale(1); }
+  50%  { opacity: 0.35; }
+  65%  { opacity: 0.9;  transform: translate(var(--x2), var(--y2)) scale(0.8); }
+  100% { opacity: 0;    transform: translate(var(--x3), var(--y3)) scale(0.3); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .title-sparkle { display: none; }
 }

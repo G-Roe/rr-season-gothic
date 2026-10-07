@@ -5,7 +5,7 @@ image: /images/kult.png
 system: Kult - Divinity Lost
 system_url: https://www.drivethrurpg.com/
 gm: Sue
-time: Thursday, 1st May 19:30 
+start: 2025-05-01 19:30
 duration: 4 hour session
 max_players: 4
 rating: 18

@@ -5,7 +5,7 @@ image: /images/dee-sanction.png
 system: Dee Sanction
 system_url: https://www.drivethrurpg.com/
 gm: Alistair Smith
-time: Tuesday, 29th April. 19:30 
+start: 2025-04-29 19:30
 duration: 3.5 hour session
 max_players: 4
 rating: 15

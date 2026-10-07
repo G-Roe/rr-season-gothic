@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Box, Text, TextInput, Button } from '@mantine/core'
+import EventTime from './EventTime'
 import './PrioritySummary.css'
 
 export default function PrioritySummary({ events, priorities, onSubmit, submitStatus = 'idle' }) {
@@ -34,7 +35,7 @@ export default function PrioritySummary({ events, priorities, onSubmit, submitSt
             <div key={event.id} className="summary-row">
               <span className="summary-rank">#{priority}</span>
               <span className="summary-event-title">{event.title}</span>
-              <span className="summary-event-meta">{event.time}</span>
+              <span className="summary-event-meta"><EventTime event={event} /></span>
             </div>
           ))}
         </div>

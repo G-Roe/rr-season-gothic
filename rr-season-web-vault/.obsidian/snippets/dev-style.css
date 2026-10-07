@@ -1,0 +1,143 @@
+/* Dev style for the RR Season Gothic how-to vault.
+   Clear, technical docs look: mono headings, bold code blocks, tidy tables.
+   Uses Obsidian theme variables so it works in light and dark mode. */
+
+body {
+  --dev-accent: #3b82f6;
+  --dev-accent-soft: rgba(59, 130, 246, 0.12);
+  --dev-code-bg: #0f172a;
+  --dev-code-fg: #e2e8f0;
+  --dev-radius: 8px;
+  --font-monospace-theme: "JetBrains Mono", "Cascadia Code", "Fira Code", Consolas, monospace;
+}
+
+/* Comfortable reading width */
+.markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-sizer {
+  --file-line-width: 820px;
+}
+
+/* Headings: monospace, with a prompt-style marker */
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3 {
+  font-family: var(--font-monospace-theme);
+  letter-spacing: -0.01em;
+}
+
+.markdown-rendered h1 {
+  padding-bottom: 0.3em;
+  border-bottom: 3px solid var(--dev-accent);
+}
+
+.markdown-rendered h2 {
+  margin-top: 1.8em;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.markdown-rendered h2::before {
+  content: "## ";
+  color: var(--dev-accent);
+}
+
+.markdown-rendered h3::before {
+  content: "### ";
+  color: var(--dev-accent);
+}
+
+/* Code blocks: dark terminal panel with accent edge */
+.markdown-rendered pre {
+  background: var(--dev-code-bg);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-left: 4px solid var(--dev-accent);
+  border-radius: var(--dev-radius);
+  padding: 0.9em 1.1em;
+}
+
+.markdown-rendered pre code {
+  color: var(--dev-code-fg);
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+/* Inline code: soft accent chip */
+.markdown-rendered :not(pre) > code {
+  background: var(--dev-accent-soft);
+  color: var(--text-normal);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  font-size: 0.88em;
+}
+
+/* Numbered steps: bold accent numbers */
+.markdown-rendered ol > li::marker {
+  color: var(--dev-accent);
+  font-weight: 700;
+  font-family: var(--font-monospace-theme);
+}
+
+/* Tables */
+.markdown-rendered table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--dev-radius);
+  overflow: hidden;
+}
+
+.markdown-rendered th {
+  background: var(--dev-accent-soft);
+  font-family: var(--font-monospace-theme);
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+.markdown-rendered th,
+.markdown-rendered td {
+  padding: 0.55em 0.8em;
+  border: none;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.markdown-rendered tr:last-child td {
+  border-bottom: none;
+}
+
+/* Callouts: rounded, with accent edge */
+.callout {
+  border-radius: var(--dev-radius);
+  border-left: 4px solid rgb(var(--callout-color));
+}
+
+.callout-title {
+  font-family: var(--font-monospace-theme);
+  font-size: 0.9em;
+}
+
+/* Links and keyboard-style bits */
+.markdown-rendered a.internal-link {
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--dev-accent);
+}
+
+.markdown-rendered kbd {
+  font-family: var(--font-monospace-theme);
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 0.1em 0.45em;
+  font-size: 0.85em;
+}
+
+/* Tags as small mono pills */
+.tag {
+  font-family: var(--font-monospace-theme);
+  border-radius: 4px;
+  font-size: 0.8em;
+}

@@ -1,8 +1,13 @@
-import event1 from './event-1-the-hunted.md?raw'
-import event2 from './event-2-dee-sanction.md?raw'
-import event3 from './event-3-the-terror-beneath.md?raw'
-import event4 from './event-4-kult.md?raw'
-import info1 from './info-1-welcome.md?raw'
+// Every .md file in this folder is loaded automatically: no need to list new events here.
+// Vite resolves the glob at build time, so adding or removing a file is picked up on the next dev reload/build.
+const modules = import.meta.glob('./*.md', { query: '?raw', import: 'default', eager: true })
+
+// Order: info cards first, then everything else; within each group by filename
+// (natural sort, so event-2 comes before event-10).
+const byName = (a, b) => a.localeCompare(b, undefined, { numeric: true })
+const isInfo = (path) => path.startsWith('./info-')
+const paths = Object.keys(modules).sort(byName)
+const raws = [...paths.filter(isInfo), ...paths.filter(p => !isInfo(p))].map(p => modules[p])
 
 // Simple browser-safe frontmatter parser — no Node dependencies
 function parseMd(raw) {
@@ -20,8 +25,6 @@ function parseMd(raw) {
   }
   return { attributes, body }
 }
-
-const raws = [info1, event1, event2, event3, event4]
 
 export const events = raws.map((raw, i) => {
   const { attributes, body } = parseMd(raw)
