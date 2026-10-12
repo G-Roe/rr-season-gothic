@@ -6,7 +6,7 @@ import './PrioritySummary.css'
 // The storm test button only shows in dev mode, or on any build when the URL has ?test
 const showTestButton = import.meta.env.DEV || new URLSearchParams(window.location.search).has('test')
 
-export default function PrioritySummary({ events, priorities, onSubmit, submitStatus = 'idle', onTestStorm }) {
+export default function PrioritySummary({ events, priorities, onSubmit, submitStatus = 'idle', onTestStorm, signupsOpen = true }) {
   const [discordUsername, setDiscordUsername] = useState('')
 
   const chosen = Object.entries(priorities)
@@ -44,7 +44,11 @@ export default function PrioritySummary({ events, priorities, onSubmit, submitSt
         </div>
       )}
 
-      {submitStatus === 'success' ? (
+      {!signupsOpen ? (
+        <button type="button" className="summary-closed" onClick={onTestStorm}>
+          The season is now closed for players
+        </button>
+      ) : submitStatus === 'success' ? (
         <div className="summary-success">
           <Text className="summary-success-text">
             Your choices have been recorded.

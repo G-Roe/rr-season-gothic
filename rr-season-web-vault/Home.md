@@ -12,6 +12,7 @@ Procedures for working on the TTRPG Event Picker site (repo: `G-Roe/rr-season-go
 - [[How to deploy to Cloudflare Pages]]
 - [[How to add or remove an event]]
 - [[How to set event times]]
+- [[How to close sign-ups]]
 
 ## Conventions
 

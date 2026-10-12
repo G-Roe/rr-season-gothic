@@ -1,6 +1,6 @@
 ---
 title: Breakdown
-gamecode: break
+gamecode: breakdown
 image: /images/breakdown.png
 system: Conflict Engine
 system_url: https://www.drivethrurpg.com/

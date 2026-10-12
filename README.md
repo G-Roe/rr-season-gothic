@@ -35,6 +35,23 @@ Description paragraph two.
 
 `start` is written in **UK local time** as `YYYY-MM-DD HH:mm` (24-hour). Never convert for GMT/BST yourself: the site works that out from the date. It displays the time as UK time (e.g. `19:30 BST`). Visitors in a different time zone get a tooltip on the time showing it in their own zone. Events with no `start` fall back to a plain `time:` text field and get no tooltip.
 
+## Opening and closing sign-ups
+
+The switch is `SIGNUPS_OPEN` in `src/config.js`:
+
+```js
+export const SIGNUPS_OPEN = true   // true = open, false = closed
+```
+
+1. Change it to `false` to close sign-ups (or back to `true` to reopen).
+2. Run `deploy.bat` (or commit and push). It goes live once Cloudflare finishes building, usually 1-3 minutes.
+
+When closed, the whole site stays up but the Discord username box and Submit button are replaced by a clickable "The season is now closed for players" line. Clicking it plays the thunder and lightning.
+
+This only hides the form. The Google Apps Script address still accepts anything posted to it directly, so to truly refuse entries add a check to the Apps Script as well.
+
+To preview the closed state locally, set it to `false`, run `npm run dev`, then set it back before deploying.
+
 ## Adding images
 
 Drop image files into `public/images/`. Reference them in the markdown frontmatter as `/images/filename.jpg`.

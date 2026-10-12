@@ -1,6 +1,6 @@
 ---
 title: The Sineater's Cradle
-gamecode: sin
+gamecode: sineater
 image: /images/river.png
 system: Cthulhu Dark
 system_url: https://www.thievesoftime.com/cthulhu-dark/

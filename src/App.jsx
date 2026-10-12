@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Title, Text } from '@mantine/core'
 import { events, selectableEvents } from './events/index.js'
-import { SUBMIT_ENDPOINT_URL } from './config.js'
+import { SUBMIT_ENDPOINT_URL, SIGNUPS_OPEN } from './config.js'
 import EventSection, { makeSparkles } from './components/EventSection'
 import InfoSection from './components/InfoSection'
 import PrioritySummary from './components/PrioritySummary'
@@ -133,6 +133,7 @@ export default function App() {
         onSubmit={handleSubmit}
         submitStatus={submitStatus}
         onTestStorm={startStorm}
+        signupsOpen={SIGNUPS_OPEN}
       />
 
       <LightningStorm stormKey={stormKey} />

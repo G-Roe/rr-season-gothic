@@ -1,6 +1,6 @@
 ---
 title: The Nocturnal Visitor
-gamecode: noct
+gamecode: nocturnal
 image: /images/cows.png
 system: Vaesen
 system_url: https://freeleaguepublishing.com/games/vaesen/

@@ -1,6 +1,6 @@
 ---
 title: Gothic Sword Lesbians
-gamecode: les
+gamecode: lesbians
 image: /images/lesbians.png
 system: Thirsty Sword Lesbians (Hack)
 system_url: https://evilhat.com/product/thirsty-sword-lesbians/

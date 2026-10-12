@@ -1,6 +1,6 @@
 ---
 title: Reason and Ruin
-gamecode: ruin
+gamecode: reason
 image: /images/ingarsby.png
 system: Lasers and Feelings (Hack)
 system_url: https://johnharper.itch.io/lasers-feelings
