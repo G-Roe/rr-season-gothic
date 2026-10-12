@@ -3,7 +3,10 @@ import { Box, Text, TextInput, Button } from '@mantine/core'
 import EventTime from './EventTime'
 import './PrioritySummary.css'
 
-export default function PrioritySummary({ events, priorities, onSubmit, submitStatus = 'idle' }) {
+// The storm test button only shows in dev mode, or on any build when the URL has ?test
+const showTestButton = import.meta.env.DEV || new URLSearchParams(window.location.search).has('test')
+
+export default function PrioritySummary({ events, priorities, onSubmit, submitStatus = 'idle', onTestStorm }) {
   const [discordUsername, setDiscordUsername] = useState('')
 
   const chosen = Object.entries(priorities)
@@ -62,13 +65,26 @@ export default function PrioritySummary({ events, priorities, onSubmit, submitSt
             }}
           />
 
-          <Button
-            type="submit"
-            disabled={!canSubmit}
-            className="summary-submit-button"
-          >
-            {submitStatus === 'submitting' ? 'Submitting…' : 'Submit'}
-          </Button>
+          <div className="summary-button-row">
+            <Button
+              type="submit"
+              disabled={!canSubmit}
+              className="summary-submit-button"
+            >
+              {submitStatus === 'submitting' ? 'Submitting…' : 'Submit'}
+            </Button>
+
+            {showTestButton && (
+              <Button
+                type="button"
+                variant="outline"
+                onClick={onTestStorm}
+                className="summary-test-button"
+              >
+                Test storm
+              </Button>
+            )}
+          </div>
 
           {!hasAnySelection && (
             <Text className="summary-submit-hint">              

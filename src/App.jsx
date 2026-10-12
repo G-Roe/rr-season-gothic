@@ -5,6 +5,8 @@ import { SUBMIT_ENDPOINT_URL } from './config.js'
 import EventSection, { makeSparkles } from './components/EventSection'
 import InfoSection from './components/InfoSection'
 import PrioritySummary from './components/PrioritySummary'
+import LightningStorm from './components/LightningStorm'
+import { primeThunder } from './utils/thunder'
 import './App.css'
 
 export default function App() {
@@ -12,6 +14,8 @@ export default function App() {
   // submitStatus: 'idle' | 'submitting' | 'success' | 'error'
   const [submitStatus, setSubmitStatus] = useState('idle')
   const [titleSparkles, setTitleSparkles] = useState(null)
+  // Bumped to set off a thunder-and-lightning storm
+  const [stormKey, setStormKey] = useState(0)
   const totalSelectable = selectableEvents.length
 
   // Fairy sparkles flutter round the page title once when it loads
@@ -40,7 +44,14 @@ export default function App() {
     })
   }
 
+  const startStorm = () => {
+    primeThunder()
+    setStormKey(k => k + 1)
+  }
+
   const handleSubmit = async ({ discordUsername }) => {
+    // Unlock audio while still inside the click, so the thunder can play once the request returns
+    primeThunder()
     setSubmitStatus('submitting')
 
     // Build a priority(number) -> gamecode lookup from the currently selected events
@@ -74,6 +85,7 @@ export default function App() {
 
       if (result.result === 'success') {
         setSubmitStatus('success')
+        setStormKey(k => k + 1)
       } else {
         throw new Error('Unexpected response from server')
       }
@@ -120,7 +132,10 @@ export default function App() {
         priorities={priorities}
         onSubmit={handleSubmit}
         submitStatus={submitStatus}
+        onTestStorm={startStorm}
       />
+
+      <LightningStorm stormKey={stormKey} />
     </div>
   )
 }

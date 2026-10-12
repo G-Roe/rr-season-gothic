@@ -109,6 +109,21 @@
   transition: background 0.15s ease !important;
 }
 
+.summary-button-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.summary-test-button {
+  border-color: var(--color-card-border) !important;
+  color: var(--color-text-muted) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.75rem !important;
+  height: 44px !important;
+}
+
 .summary-submit-button:hover:not(:disabled) {
   background: var(--color-accent-goldHover) !important;
 }

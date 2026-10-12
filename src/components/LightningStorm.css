@@ -1,0 +1,36 @@
+/* Behind the page content: the bolt and the lit-up sky around it */
+.storm-back {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.storm-sky,
+.storm-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.storm-sky {
+  background: radial-gradient(
+    ellipse 70% 90% at var(--strike-x, 50%) 0%,
+    rgba(190, 180, 255, 0.45) 0%,
+    rgba(110, 100, 170, 0.18) 45%,
+    transparent 80%
+  );
+}
+
+/* Over the page content: a faint wash so the whole screen lights up with each strike */
+.storm-flash {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+  background: rgb(225, 220, 255);
+  mix-blend-mode: screen;
+}

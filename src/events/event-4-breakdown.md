@@ -18,7 +18,7 @@ This game explores what happens when the fictions people hold about themselves c
 
 As a game of modern Gothic sensibilities, it strives to explore secrets, crimes and traumas of the past in an oppressive and isolated setting. It is the darker palette of humanity. The tragic currents of obsession and guilt, the blurred  certainty of sanity, truth, madness and lies.
 
-> Content Warnings:  Coercive behaviour. Domestic abuse. Bullying. Gas-lighting. Betrayal. Infidelity. Neonatal serial murder. Endangered pregnancy. Medical harm. Threat to infant. Captivity. Violence. Loss of autonomy. Loss of identity. Mental illness. Self harm. Player character betrayal. Player character conflict. Physical trauma. 
+> Content Warnings:  Coercive behaviour. Domestic abuse. Bullying. Gas-lighting. Betrayal. Infidelity. Neonatal serial murder. Endangered pregnancy. Medical harm. Captivity. Violence. Loss of autonomy. Loss of identity. Mental illness. Self harm. Player character betrayal. Player character conflict. Physical trauma. 
 
 
 

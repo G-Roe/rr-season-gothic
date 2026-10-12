@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "how-to/How to run locally.md",
+                "file": "how-to/How to deploy to Cloudflare Pages.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "How to run locally"
+              "title": "How to deploy to Cloudflare Pages"
             }
           }
         ]
@@ -190,11 +190,11 @@
   },
   "active": "1d5e2a0b651e9114",
   "lastOpenFiles": [
+    "how-to/How to run locally.md",
     "how-to/How to set event times.md",
     "how-to/How to add or remove an event.md",
     "how-to/How to add or remove an event.md.tmp.36824.c27460789778",
     "how-to/How to deploy to Cloudflare Pages.md",
-    "how-to/How to run locally.md",
     "Home.md.tmp.36824.f63d422e1b31",
     "how-to/How to deploy to Cloudflare Pages.md.tmp.36824.b018e0016936",
     "Home.md.tmp.36824.faf5b9ca439c",
