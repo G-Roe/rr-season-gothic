@@ -5,7 +5,7 @@ image: /images/river.png
 system: Cthulhu Dark
 system_url: https://www.thievesoftime.com/cthulhu-dark/
 gm: dlowe93
-start: 2026-11-15 15:30
+start: 2026-11-15 18:30
 duration: 2.5 hour session
 max_players: 4
 rating: 15
