@@ -6,7 +6,7 @@ image: /images/blindfold.png
 
 The Gothic Season runs from **Monday 9th November to Sunday 15th**. There are seven games on offer. We try to get as many people into as many games as possible. You are welcome to sign up for as many games as you like, but availability may be restricted. All we ask is that you are free to join all the games you register for. 
 
-> If you are not currently a member of the Raspy Raven Discord server, you may join [here](https://discord.gg/7VdFAKuezs).
+> If you are not currently a member of the Raspy Raven Discord server, you may join [here](https://rr-server-invite.pages.dev/).
 
 # How We Run Games 
 
