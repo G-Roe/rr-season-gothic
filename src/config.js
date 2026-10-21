@@ -4,4 +4,4 @@ export const SUBMIT_ENDPOINT_URL = 'https://script.google.com/macros/s/AKfycbyoq
 
 // Sign-ups switch. true = players can pick and submit. false = the form is replaced by
 // "The season is now closed for players". Change it, then deploy (see README).
-export const SIGNUPS_OPEN = true
+export const SIGNUPS_OPEN = false
