@@ -23,7 +23,7 @@ export function makeSparkles(count = 12) {
   }))
 }
 
-export default function EventSection({ event, totalEvents, selectedPriority, takenNumbers, onPriorityChange }) {
+export default function EventSection({ event, signupsOpen = true, totalEvents, selectedPriority, takenNumbers, onPriorityChange }) {
   const numbers = Array.from({ length: totalEvents }, (_, i) => i + 1)
   const titleRef = useRef(null)
   const [sparkles, setSparkles] = useState(null)
@@ -99,7 +99,15 @@ export default function EventSection({ event, totalEvents, selectedPriority, tak
           )}
         </div>
 
-        <div className="priority-section">
+        {!signupsOpen && event.purchase_url && (
+          <div className="event-purchase">
+            <Anchor href={event.purchase_url} target="_blank" className="event-purchase-link">
+              {event.title} is available here.
+            </Anchor>
+          </div>
+        )}
+
+        {signupsOpen && <div className="priority-section">
           <Text className="priority-label">
             {selectedPriority ? `Your priority: #${selectedPriority}` : 'Set your priority'}
           </Text>
@@ -126,7 +134,7 @@ export default function EventSection({ event, totalEvents, selectedPriority, tak
               )
             })}
           </Group>
-        </div>
+        </div>}
       </div>
     </section>
   )

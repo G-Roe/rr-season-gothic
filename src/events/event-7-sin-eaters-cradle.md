@@ -9,6 +9,7 @@ start: 2026-11-15 18:30
 duration: 2.5 hour session
 max_players: 4
 rating: 15
+purchase_url: https://www.drivethrurpg.com/en/product/587307/the-sineater-s-cradle
 ---
 
 A family is lost in the California Redwoods. A search party has until dark to find them.

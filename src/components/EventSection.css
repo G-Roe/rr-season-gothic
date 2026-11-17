@@ -254,3 +254,39 @@
 @media (prefers-reduced-motion: reduce) {
   .title-sparkle { display: none; }
 }
+
+/* Closed-mode purchase link: a soft gold spotlight sweeps across the text
+   (toned-down version of the "Limelight" effect from text-effects.colorion.co) */
+.event-purchase {
+  margin-top: 1rem;
+}
+
+.event-purchase-link {
+  --ink: var(--color-accent-goldHover);
+  --ink-dim: color-mix(in srgb, var(--color-accent-gold) 62%, transparent);
+  font-weight: 600;
+  text-decoration: none;
+  background: radial-gradient(9ch 100% at 50% 50%, var(--ink) 15%, var(--ink-dim) 80%) 0 0 / 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: purchase-spotlight 6s ease-in-out infinite alternate;
+}
+
+.event-purchase-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent-gold);
+}
+
+@keyframes purchase-spotlight {
+  0%   { background-position: 100% 0; }
+  100% { background-position: 0% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .event-purchase-link {
+    animation: none;
+    background: none;
+    color: var(--color-accent-gold);
+  }
+}

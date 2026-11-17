@@ -9,6 +9,7 @@ start: 2026-11-11 19:30
 duration: 2.5 hour session
 max_players: 4
 rating: 15
+purchase_url: https://www.drivethrurpg.com/product/592340/reason-ruin?affiliate_id=319350
 ---
 
 IT IS 1920. YOU HAVE RETURNED TO INGARSBY HALL, the last remnant of a deserted Leicestershire village. 

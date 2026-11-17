@@ -10,6 +10,7 @@ duration: 3 hours
 max_players: 4
 rating: 15
 tech: Roll 20
+purchase_url: https://www.drivethrurpg.com/en/product/594073/gothic-romance-lesbians?affiliate_id=284538
 ---
 
 Somewhere in 19th Century Europe is a fog-shrouded country dotted with gloomy manor houses, looming castles and dark forests. Dark creatures inhabit this place, and villagers cower in fear of the monsters that stalk the night. But you know that there’s a difference between a monster and a villain.

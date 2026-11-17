@@ -98,16 +98,18 @@ export default function App() {
   return (
     <div className="app-root">
       <header className="app-header">
-        <Text className="app-eyebrow">-- Raspy Raven :: Player Sign-Up --</Text>
+        <Text className="app-eyebrow">{SIGNUPS_OPEN ? '-- Raspy Raven :: Player Sign-Up --' : '-- Raspy Raven --'}</Text>
         <div className="event-title-wrap">
           {titleSparkles?.map((s, i) => (
             <span key={i} className="title-sparkle" style={s} aria-hidden="true" />
           ))}
           <Title className="app-title">{seasonTitle}</Title>
         </div>
-        <Text className="app-subtitle">
-          Select the games you would like you play, indicating your priority.
-        </Text>
+        {SIGNUPS_OPEN && (
+          <Text className="app-subtitle">
+            Select the games you would like you play, indicating your priority.
+          </Text>
+        )}
       </header>
 
       <main>
@@ -118,6 +120,7 @@ export default function App() {
             <EventSection
               key={event.id}
               event={event}
+              signupsOpen={SIGNUPS_OPEN}
               totalEvents={totalSelectable}
               selectedPriority={priorities[event.id] ?? null}
               takenNumbers={takenByOthers(event.id)}
@@ -127,14 +130,16 @@ export default function App() {
         )}
       </main>
 
-      <PrioritySummary
-        events={selectableEvents}
-        priorities={priorities}
-        onSubmit={handleSubmit}
-        submitStatus={submitStatus}
-        onTestStorm={startStorm}
-        signupsOpen={SIGNUPS_OPEN}
-      />
+      {SIGNUPS_OPEN && (
+        <PrioritySummary
+          events={selectableEvents}
+          priorities={priorities}
+          onSubmit={handleSubmit}
+          submitStatus={submitStatus}
+          onTestStorm={startStorm}
+          signupsOpen={SIGNUPS_OPEN}
+        />
+      )}
 
       <LightningStorm stormKey={stormKey} />
     </div>

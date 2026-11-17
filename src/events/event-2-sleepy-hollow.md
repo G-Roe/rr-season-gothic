@@ -9,6 +9,7 @@ start: 2026-11-10 19:30
 duration: 3.5 hour session
 max_players: 4
 rating: PG13
+purchase_url: https://rpgtrader.com/products/10948/the-raspy-ravens-of-sleepy-hollow
 ---
 
 > A Story Game based on the Legend of Sleepy Hollow.

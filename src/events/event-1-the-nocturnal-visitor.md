@@ -10,6 +10,7 @@ duration: 2.5 hour session
 max_players: 4
 rating: 15
 tech: Roll 20
+purchase_url: https://www.drivethrurpg.com/product/593408/the-nocturnal-visitor-a-vaesen-adventure-in-cumbria?affiliate_id=1511217
 ---
 
 What troubles the dreams of young Elizabeth Armitage? What is causing the deaths of livestock around the sleepy village of Raglin? 

@@ -10,6 +10,7 @@ duration: 3 to 4 hour session
 max_players: 6
 rating: 18
 tech: Googlesheets
+purchase_url: https://groundhoggoth.itch.io/monsterhearts-gothic
 ---
 
 There is something unspeakable in the cellars; shadows stalk the halls at night, whispering in your dreams; the head of the school has a secret they will kill to keep; and you have an assignation in the library after lights out where perhaps you will learn the identity of your secret admirer...
